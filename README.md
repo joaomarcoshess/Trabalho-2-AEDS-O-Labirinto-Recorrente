@@ -1,3 +1,19 @@
+# # Geração de labirintos quadraticos em modo aleatório: Uma implementação em C
+
+<div style="display: inline-block;">
+<img align="center" height="20px" width="90px" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"/> 
+<img align="center" height="20px" width="60px" src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white"/> 
+<img align="center" height="20px" width="80px" src="https://img.shields.io/badge/Made%20for-VSCode-1f425f.svg"/> 
+<a href="https://github.com/mpiress/midpy/issues">
+<img align="center" height="20px" width="90px" src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"/>
+<img align="center" height="20px" width="80px" src="https://badgen.net/badge/license/MIT/green"/>
+</a> 
+</div>
+
+<p> </p>
+<p> </p>
+
+
 # Trabalho 2 - O Labirinto Recorrente
 Trabalho 2 de AEDS com implementação em C++ de "O Labirinto Recorrente".
 
@@ -16,4 +32,4 @@ Trabalho 2 de AEDS com implementação em C++ de "O Labirinto Recorrente".
 <li><b>make run</b>: Executa o programa armazenado na pasta build após este ser compilado.</li><br>
 <li><b>make clean</b>: Exclui a última compilação feita anteriormente na pasta build.</li><br><br>
 
-<p>Também é possível executar o programa através do site de hospedagem de código, Replit, onde foi realizado a programação do código do "Caminho Guloso": <link>https://replit.com/@Joao-MarcosMa57/Trabalho-1-AEDS</link></p>
+<p>Também é possível executar o programa através do site de hospedagem de código, Replit, onde foi realizado a programação do código do "O Labirinto Recorrente": <link>https://replit.com/@Joao-MarcosMa57/Trabalho-1-AEDS</link></p>
