@@ -20,7 +20,9 @@ Trabalho 2 de AEDS com implementação em C++ de "O Labirinto Recorrente".
 
 <p> O programa consiste na utilização de K matrizes quadradas de tamanho [N/N], a fim de determinar o caminho com os maiores valores numéricos próximos de determinada posição. </p>
 
-<h2>Introdução </h2>
+<h2>Objetivo </h2>
+
+<p> Para vencer o Labirinto Recorrente, é necessário percorrer todas as posições </p>
 
 
 <h2>Compilação e Execução do Programa</h2>
