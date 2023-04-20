@@ -31,7 +31,7 @@ Trabalho 2 de AEDS com implementação em C++ de "O Labirinto Recorrente".
 
 <p>Também é possível executar o programa através do site de hospedagem de código, Replit, onde foi realizado a programação do código do "O Labirinto Recorrente": <link>https://replit.com/@Joao-MarcosMa57/Trabalho-1-AEDS</link></p>
 
-<p> </p>
+<br>
 
 <h2>Conclusão</h2>
 
