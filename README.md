@@ -29,9 +29,11 @@ Trabalho 2 de AEDS com implementação em C++ de "O Labirinto Recorrente".
 <li><b>make run</b>: Executa o programa armazenado na pasta build após este ser compilado.</li><br>
 <li><b>make clean</b>: Exclui a última compilação feita anteriormente na pasta build.</li><br><br>
 
+<p>Também é possível executar o programa através do site de hospedagem de código, Replit, onde foi realizado a programação do código do "O Labirinto Recorrente": <link>https://replit.com/@Joao-MarcosMa57/Trabalho-1-AEDS</link></p>
+
 <h2>Conclusão</h2>
 
 <p>Não é possível calcular o custo computacional de um programa com caminhos randômicos, pois existem inúmeras possibilidades de opções para serem analisadas. No entanto, é possível pegar um caso específico, ou melhor, um caso especial para ser explorado, que é o caso do programa percorrer todas as colunas de uma determinada linha e logo em seguida passar para a próxima. Caso isso aconteça, o custo computacional será n*M. </p>
 
 
-<p>Também é possível executar o programa através do site de hospedagem de código, Replit, onde foi realizado a programação do código do "O Labirinto Recorrente": <link>https://replit.com/@Joao-MarcosMa57/Trabalho-1-AEDS</link></p>
+
