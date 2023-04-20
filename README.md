@@ -1,3 +1,6 @@
+# Trabalho 2 - O Labirinto Recorrente
+Trabalho 2 de AEDS com implementação em C++ de "O Labirinto Recorrente".
+
 <div style="display: inline-block;">
 <img align="center" height="20px" width="90px" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"/> 
 <img align="center" height="20px" width="60px" src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white"/> 
@@ -10,10 +13,6 @@
 
 <p> </p>
 <p> </p>
-
-
-# Trabalho 2 - O Labirinto Recorrente
-Trabalho 2 de AEDS com implementação em C++ de "O Labirinto Recorrente".
 
 <h2>Introdução </h2>
 
