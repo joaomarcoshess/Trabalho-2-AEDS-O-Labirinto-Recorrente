@@ -38,4 +38,6 @@ Trabalho 2 de AEDS com implementação em C++ de "O Labirinto Recorrente".
 <p>Não é possível calcular o custo computacional de um programa com caminhos randômicos, pois existem inúmeras possibilidades de opções para serem analisadas. No entanto, é possível pegar um caso específico, ou melhor, um caso especial para ser explorado, que é o caso do programa percorrer todas as colunas de uma determinada linha e logo em seguida passar para a próxima. Caso isso aconteça, o custo computacional será n*M. </p>
 
 
+<h2>Contato</h2>
 
+<p><i>marcosjoaohess@gmail.com</i></p>
