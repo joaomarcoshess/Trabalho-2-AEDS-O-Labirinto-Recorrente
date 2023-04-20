@@ -16,9 +16,11 @@ Trabalho 2 de AEDS com implementação em C++ de "O Labirinto Recorrente".
 
 <h2>Introdução </h2>
 
-<p> A necessidade de encontrar um dado em específico dentre diversos outros dados vem se tornando cada dia mais importante para obter a informação mais precisa para determinada situação. Com isso, a ideia de implementação do código do Caminho Guloso é um exemplo de como é possível escolher pelo caminho mais interessante a partir da análise de todas as possibilidades. </p>
+<p> Por muitos anos, foram criados jogos, principalmente 2d, no qual a sua movimentação se baseava em oito direções: Acima, abaixo, direita, esquerda e todas as diagonais. Atualmente, ---. Dito isso, o Labirinto Recorrente utiliza de matrizes NxN formada por variados caminhos que podem aumentar sua vida, diminuir sua vida, acrescentar sua quantidade de itens ou bloquear o seu caminho. </p>
 
 <p> O programa consiste na utilização de K matrizes quadradas de tamanho [N/N], a fim de determinar o caminho com os maiores valores numéricos próximos de determinada posição. </p>
+
+<h2>Introdução </h2>
 
 
 <h2>Compilação e Execução do Programa</h2>
