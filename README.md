@@ -24,6 +24,10 @@ Trabalho 2 de AEDS com implementação em C++ de "O Labirinto Recorrente".
 
 <p> Para vencer o Labirinto Recorrente, é necessário percorrer todas as posições </p>
 
+<h2>Funções </h2>
+
+* ``` void Welcome(); ```: Exibe a mensagem de entrada do programa; 
+
 
 <h2>Compilação e Execução do Programa</h2>
 
