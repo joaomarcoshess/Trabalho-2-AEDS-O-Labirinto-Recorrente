@@ -1,22 +1,24 @@
 #include <bits/stdc++.h>
 
-#ifndef LABIRINTO_HPP_INCLUDED
-#define LABIRINTO_HPP_INCLUDED
+#ifndef LAB_HPP_INCLUDED
+#define LAB_HPP_INCLUDED
 
 using namespace std;
 
-class Labirinto
+class Lab
 {
   private:
-    string **labirinto;
+    string **lab;
     bool **verificador;
-    int linha, coluna, tamLabirinto, numLabirinto;
+    int linha, coluna, tamLab, numLab;
     int vidas, passos, itensPegos, perigos, sacola;
 
   public:
 
-	  Labirinto(int vidas, int passos, int itensPegos,int perigos, int sacola);
-    Labirinto();
+	  Lab(int vidas, int passos, int itensPegos,int perigos, int sacola);
+    Lab();
+
+    void Welcome();
 
     void setVidas(int vidas);
     int getVidas();
@@ -29,27 +31,27 @@ class Labirinto
     void setSacola(int sacola);
     int getSacola();
 
-    void criandoLabirinto();
-    void deletandoLabirinto();
+    void CriandoLab();
+    void DeletandoLab();
 
-    void apagarArquivos();
-    void criandoArquivoAuxiliar();
-    void atualizarArquivoAuxiliar();
-    void atualizarSegundoArquivoAuxiliar();
+    void ApagarArq();
+    void CriarArqAux();
+    void AtualizarArqAux();
+    void AtualizarSegundoArqAux();
 
-    void criandoArquivoVerificador();
-    void atualizarArquivoVerificador();
-    void atualizarSegundoArquivoVerificador();
+    void CriarArqVerificador();
+    void AtualizarArqVerificador();
+    void AtualizarSegundoArqVerificador();
 
-    void obtendoPosicaoInicial();
-    void obtendoPosicaoAleatoria();
-    void verificandoParedes(int linha, int coluna);
+    void ObterPosInicial();
+    void ObterPosAleatoria();
+    void VerificarParede(int linha, int coluna);
 
-    void pegandoValoresLabirinto();
-    void caminhandoLabirinto();
-    void verificandoSacola();
-    bool verificarPasso(int newLinha, int newColuna);
-    int verificarCasasInexploradas();
-    void printResultados();
+    void PegarValoresLab();
+    void CaminharNoLab();
+    void VerificarSacola();
+    bool VerificarPasso(int newLinha, int newColuna);
+    int VerificarCasa();
+    void Resultado();
 };
 #endif
