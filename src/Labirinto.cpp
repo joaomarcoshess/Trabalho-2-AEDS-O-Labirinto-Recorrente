@@ -1,145 +1,113 @@
 #include "Labirinto.hpp"
 
-Labirinto::Labirinto(int vidas, int passos, int itensPegos, int perigos, int sacola)
-{
+Lab::Lab(int vidas, int passos, int itensPegos, int perigos, int sacola) {
   setVidas(vidas);
   setPassos(passos);
   setItensPegos(itensPegos);
   setPerigos(perigos);
   setSacola(sacola);
 }
-Labirinto::Labirinto()
-{
-}
+Lab::Lab() {}
 
-void Labirinto::setVidas(int vidas)
-{
-  this->vidas = vidas;
-}
-int Labirinto::getVidas()
-{
-  return this->vidas;
-}
+void Lab::setVidas(int vidas) { this->vidas = vidas; }
+int Lab::getVidas() { return this->vidas; }
 
-void Labirinto::setPassos(int passos)
-{
-  this->passos = passos;
-}
-int Labirinto::getPassos()
-{
-  return this->passos;
-}
+void Lab::setPassos(int passos) { this->passos = passos; }
+int Lab::getPassos() { return this->passos; }
 
-void Labirinto::setItensPegos(int itensPegos)
-{
-  this->itensPegos = itensPegos;
-}
-int Labirinto::getItensPegos()
-{
-  return this->itensPegos;
-}
+void Lab::setItensPegos(int itensPegos) { this->itensPegos = itensPegos; }
+int Lab::getItensPegos() { return this->itensPegos; }
 
-void Labirinto::setPerigos(int perigos)
-{
-  this->perigos = perigos;
-}
-int Labirinto::getPerigos()
-{
-  return this->perigos;
-}
+void Lab::setPerigos(int perigos) { this->perigos = perigos; }
+int Lab::getPerigos() { return this->perigos; }
 
-void Labirinto::setSacola(int sacola)
-{
-  this->sacola = sacola;
-}
-int Labirinto::getSacola()
-{
-  return this->sacola;
-}
+void Lab::setSacola(int sacola) { this->sacola = sacola; }
+int Lab::getSacola() { return this->sacola; }
 
-void Labirinto::criandoLabirinto()
-{
-  this->labirinto = new string*[this->tamLabirinto];
-  
-  for (int i = 0; i < this->tamLabirinto; i++)
-  {
-    this->labirinto[i] = new string[this->tamLabirinto];
+void Lab::CriandoLab() {
+  this->lab = new string *[this->tamLab];
+
+  for (int i = 0; i < this->tamLab; i++) {
+    this->lab[i] = new string[this->tamLab];
   }
 
-  this->verificador = new bool*[this->tamLabirinto];
-  
-  for (int i = 0; i < this->tamLabirinto; i++)
-  {
-    this->verificador[i] = new bool[this->tamLabirinto];
+  this->verificador = new bool *[this->tamLab];
+
+  for (int i = 0; i < this->tamLab; i++) {
+    this->verificador[i] = new bool[this->tamLab];
   }
 }
 
-void Labirinto::deletandoLabirinto()
-{
-  for (int i = 0; i < this->tamLabirinto; i++)
-  {
-    delete[] this->labirinto[i];
+void Lab::DeletandoLab() {
+  for (int i = 0; i < this->tamLab; i++) {
+    delete[] this->lab[i];
   }
-  delete[] this->labirinto;
-  
-for (int i = 0; i < this->tamLabirinto; i++)
-  {
+  delete[] this->lab;
+
+  for (int i = 0; i < this->tamLab; i++) {
     delete[] this->verificador[i];
   }
   delete[] this->verificador;
 }
 
-void Labirinto::apagarArquivos()
-{
+void Lab::ApagarArq() {
   remove("arquivoAuxiliar.txt");
   remove("segundoArquivoAuxiliar.txt");
   remove("segundoArquivoVerificador.txt");
-  
+
   exit(0);
 }
 
-void Labirinto::criandoArquivoAuxiliar()
-{
+void Lab::Welcome() {
+  cout << "--------------------------- Bem Vindo ao Labirinto Recorrente! "
+          "--------------------------- "
+       << endl
+       << endl;
+  cout << "O objetivo deste programa é fazer um garoto percorrer pelo mapa e "
+          "sobreviver aos obstáculos"
+       << endl;
+  cout << "ao máximo que puder, evitando perder vidas nos perigos e ficar sem "
+          "saídas com as paredes."
+       << endl << endl;
+}
+
+void Lab::CriarArqAux() {
   ofstream arqAux;
   ifstream arq;
   string line;
 
   arq.open("./dataset/input.data");
-  if(!arq.is_open())
-  {
+  if (!arq.is_open()) {
     cout << "Erro na abertura do arquivo: input.data!!!" << endl;
     exit(0);
   }
   arqAux.open("arquivoAuxiliar.txt");
 
-  arq >> this->tamLabirinto;
-  arq >> this->tamLabirinto;
-  arq >> this->numLabirinto;
-  
-  while(arq)
-  {
+  arq >> this->tamLab;
+  arq >> this->tamLab;
+  arq >> this->numLab;
+
+  while (arq) {
     getline(arq, line);
     arqAux << line;
     arqAux << "\n";
   }
-  
+
   arq.close();
   arqAux.close();
-  
+
   arqAux.open("segundoArquivoAuxiliar.txt");
   arqAux.close();
 }
 
-void Labirinto::criandoArquivoVerificador()
-{
+void Lab::CriarArqVerificador() {
   ofstream arqVerificador;
   ifstream arq;
   char ch;
   string line;
 
   arq.open("./dataset/input.data");
-  if(!arq.is_open())
-  {
+  if (!arq.is_open()) {
     cout << "Erro na abertura do arquivo: input.data!!!" << endl;
     exit(0);
   }
@@ -147,21 +115,19 @@ void Labirinto::criandoArquivoVerificador()
 
   getline(arq, line);
   arq >> ch;
-  while(arq)
-  {
+  while (arq) {
     arq >> ch;
     arqVerificador << 0;
     arqVerificador << " ";
   }
-  
+
   arq.close();
   arqVerificador.close();
   arqVerificador.open("segundoArquivoVerificador.txt");
   arqVerificador.close();
 }
 
-void Labirinto::atualizarArquivoAuxiliar()
-{
+void Lab::AtualizarArqAux() {
   ofstream arq;
   ifstream arqAux;
   string line;
@@ -169,26 +135,24 @@ void Labirinto::atualizarArquivoAuxiliar()
   remove("arquivoAuxiliar.txt");
   arq.open("arquivoAuxiliar.txt");
   arqAux.open("segundoArquivoAuxiliar.txt");
-  if(!arqAux.is_open())
-  {
-    cout << "Erro na abertura do arquivo: segundoArquivoAuxiliar.txt!!!" << endl;
-    deletandoLabirinto();
-    apagarArquivos();
+  if (!arqAux.is_open()) {
+    cout << "Erro na abertura do arquivo: segundoArquivoAuxiliar.txt!!!"
+         << endl;
+    DeletandoLab();
+    ApagarArq();
   }
 
-  while(arqAux)
-  {
+  while (arqAux) {
     getline(arqAux, line);
     arq << line;
     arq << "\n";
   }
-  
+
   arq.close();
   arqAux.close();
 }
 
-void Labirinto::atualizarArquivoVerificador()
-{
+void Lab::AtualizarArqVerificador() {
   ofstream arqVerificador;
   ifstream arqAux;
   string line;
@@ -196,35 +160,31 @@ void Labirinto::atualizarArquivoVerificador()
   remove("arquivoVerificador.txt");
   arqVerificador.open("arquivoVerificador.txt");
   arqAux.open("segundoArquivoVerificador.txt");
-  if(!arqAux.is_open())
-  {
-    cout << "Erro na abertura do arquivo: segundoArquivoVerificador.txt!!!" << endl;
-    deletandoLabirinto();
-    apagarArquivos();
+  if (!arqAux.is_open()) {
+    cout << "Erro na abertura do arquivo: segundoArquivoVerificador.txt!!!"
+         << endl;
+    DeletandoLab();
+    ApagarArq();
   }
 
-  while(arqAux)
-  {
+  while (arqAux) {
     getline(arqAux, line);
     arqVerificador << line;
     arqVerificador << "\n";
   }
-  
+
   arqVerificador.close();
   arqAux.close();
 }
 
-void Labirinto::atualizarSegundoArquivoAuxiliar()
-{
+void Lab::AtualizarSegundoArqAux() {
   ofstream arqAux;
-  
+
   arqAux.open("segundoArquivoAuxiliar.txt", ios::app);
 
-  for(int i = 0; i < this->tamLabirinto; i++)
-  {
-    for(int j = 0; j < this->tamLabirinto; j++)
-    {
-      arqAux << this->labirinto[i][j];
+  for (int i = 0; i < this->tamLab; i++) {
+    for (int j = 0; j < this->tamLab; j++) {
+      arqAux << this->lab[i][j];
       arqAux << " ";
     }
     arqAux << "\n";
@@ -233,16 +193,13 @@ void Labirinto::atualizarSegundoArquivoAuxiliar()
   arqAux.close();
 }
 
-void Labirinto::atualizarSegundoArquivoVerificador()
-{
+void Lab::AtualizarSegundoArqVerificador() {
   ofstream arqAux;
-  
+
   arqAux.open("segundoArquivoVerificador.txt", ios::app);
 
-  for(int i = 0; i < this->tamLabirinto; i++)
-  {
-    for(int j = 0; j < this->tamLabirinto; j++)
-    {
+  for (int i = 0; i < this->tamLab; i++) {
+    for (int j = 0; j < this->tamLab; j++) {
       arqAux << this->verificador[i][j];
       arqAux << " ";
     }
@@ -252,201 +209,175 @@ void Labirinto::atualizarSegundoArquivoVerificador()
   arqAux.close();
 }
 
-void Labirinto::obtendoPosicaoInicial()
-{
+void Lab::ObterPosInicial() {
   int linha, coluna, erro;
-  
-  do
-  {
+
+  do {
     erro = 0;
-    cout << "Linha: ";
+    cout << "Informe uma linha: ";
     cin >> linha;
-    cout << "Coluna: ";
+    cout << "Informe uma coluna: ";
     cin >> coluna;
-    
-    if(cin.fail() || coluna < 0 || coluna >= this->tamLabirinto || linha < 0 || linha >= this->tamLabirinto || this->labirinto[linha][coluna] == "#")
-    {
+
+    if (cin.fail() || coluna < 0 || coluna >= this->tamLab || linha < 0 ||
+        linha >= this->tamLab || this->lab[linha][coluna] == "#") {
       erro = 1;
       cin.clear();
       cin.ignore(80, '\n');
     }
-    if(erro == 1)
-    {
+    if (erro == 1) {
       cout << endl << "Digite uma opção valida!" << endl << endl;
     }
-  }while(erro == 1);
+  } while (erro == 1);
 
   this->linha = linha;
   this->coluna = coluna;
-  verificandoParedes(linha, coluna);
+  VerificarParede(linha, coluna);
 }
 
-void Labirinto::obtendoPosicaoAleatoria()
-{
+void Lab::ObterPosAleatoria() {
   int linha, coluna;
-  
-  do
-  {
-    linha = rand()%this->tamLabirinto;
-    coluna = rand()%this->tamLabirinto;
-    
-    if(this->labirinto[linha][coluna] == "#")
-    {
+
+  do {
+    linha = rand() % this->tamLab;
+    coluna = rand() % this->tamLab;
+
+    if (this->lab[linha][coluna] == "#") {
       linha = -1;
-    }
-    else
-    {
+    } else {
       this->linha = linha;
       this->coluna = coluna;
-      verificandoParedes(linha, coluna);
+      VerificarParede(linha, coluna);
     }
-  }while(linha == -1);
+  } while (linha == -1);
 }
 
-void Labirinto::verificandoParedes(int linha, int coluna)
-{
-  if(!(linha+1 >= this->tamLabirinto || coluna+1 >= this->tamLabirinto || linha-1 < 0 || coluna-1 < 0))
-  {
-    if(this->labirinto[linha+1][coluna] == "#"  && this->labirinto[linha+1][coluna-1] == "#"  && this->labirinto[linha][coluna-1] == "#"  && this->labirinto[linha-1][coluna-1] == "#"  && this->labirinto[linha-1][coluna] == "#"  && this->labirinto[linha-1][coluna+1] == "#"  && this->labirinto[linha][coluna+1] == "#"  && this->labirinto[linha+1][coluna+1] == "#")
-    {
-      cout << "O garoto não conseguiu sair pois estava cercado nas 8 posições por paredes!!!" << endl << endl;
-      cout << "Casas percorridas ao todo: " << getPassos() << endl;
-    cout << "Soma de itens coletados pelo caminho: " << getItensPegos() << endl;
-    cout << "Número de casas não exploradas no labirinto: " << verificarCasasInexploradas() << endl;
-    cout << "Perigos enfrentados durante o caminho: " << getPerigos() << endl;
-      deletandoLabirinto();
-      apagarArquivos();
+void Lab::VerificarParede(int linha, int coluna) {
+  if (!(linha + 1 >= this->tamLab || coluna + 1 >= this->tamLab ||
+        linha - 1 < 0 || coluna - 1 < 0)) {
+    if (this->lab[linha + 1][coluna] == "#" &&
+        this->lab[linha + 1][coluna - 1] == "#" &&
+        this->lab[linha][coluna - 1] == "#" &&
+        this->lab[linha - 1][coluna - 1] == "#" &&
+        this->lab[linha - 1][coluna] == "#" &&
+        this->lab[linha - 1][coluna + 1] == "#" &&
+        this->lab[linha][coluna + 1] == "#" &&
+        this->lab[linha + 1][coluna + 1] == "#") {
+      cout << "O garoto acabou sendo cercado por 8 paredes ao seu redor..."
+           << endl
+           << endl;
+      cout << "Posicoes percorridas: " << getPassos() << endl;
+      cout << "Total de itens coletados: " << getItensPegos() << endl;
+      cout << "Posicoes nao exploradas: " << VerificarCasa() << endl;
+      cout << "Perigos confrontados: " << getPerigos() << endl;
+      DeletandoLab();
+      ApagarArq();
     }
   }
 }
 
-void Labirinto::pegandoValoresLabirinto()
-{
+void Lab::PegarValoresLab() {
   ifstream arq, arqVerificador;
   int itensCaminho;
   bool aux = 0, condicaoParada = 0;
-  
-  do
-  {
+
+  do {
     remove("segundoArquivoAuxiliar.txt");
     remove("segundoArquivoVerificador.txt");
     itensCaminho = itensPegos;
-    
+
     arq.open("arquivoAuxiliar.txt");
-    if(!arq.is_open())
-    {
+    if (!arq.is_open()) {
       cout << "Erro na abertura do arquivo: arquivoAuxliar.txt!!!" << endl;
-      deletandoLabirinto();
-      apagarArquivos();
+      DeletandoLab();
+      ApagarArq();
     }
     arqVerificador.open("arquivoVerificador.txt");
-    if(!arq.is_open())
-    {
+    if (!arq.is_open()) {
       cout << "Erro na abertura do arquivo: arquivoVerificador.txt!!!" << endl;
-      deletandoLabirinto();
-      apagarArquivos();
+      DeletandoLab();
+      ApagarArq();
     }
-    
-    for(int k = 0; k < this->numLabirinto; k++)
-    {
-      for(int i = 0; i < this->tamLabirinto; i++)
-      {
-        for(int j = 0; j < this->tamLabirinto; j++)
-        {
-          arq >> this->labirinto[i][j];
+
+    for (int k = 0; k < this->numLab; k++) {
+      for (int i = 0; i < this->tamLab; i++) {
+        for (int j = 0; j < this->tamLab; j++) {
+          arq >> this->lab[i][j];
           arqVerificador >> this->verificador[i][j];
         }
       }
-      if(aux == 1)
-      {
-        if(getVidas() != 0)
-        {
-          while(condicaoParada == 0)
-          {
-            obtendoPosicaoAleatoria();
-            condicaoParada = verificarPasso(this->linha, this->coluna);
+      if (aux == 1) {
+        if (getVidas() != 0) {
+          while (condicaoParada == 0) {
+            ObterPosAleatoria();
+            condicaoParada = VerificarPasso(this->linha, this->coluna);
           }
         }
         condicaoParada = 0;
-      }
-      else
-      {
-        obtendoPosicaoInicial();
+      } else {
+        ObterPosInicial();
         aux = 1;
       }
-      caminhandoLabirinto();
-      atualizarSegundoArquivoAuxiliar();
-      atualizarSegundoArquivoVerificador();
+      CaminharNoLab();
+      AtualizarSegundoArqAux();
+      AtualizarSegundoArqVerificador();
     }
-    
+
     arq.close();
     arqVerificador.close();
-    atualizarArquivoAuxiliar();
-    atualizarArquivoVerificador();
-    if(getVidas() == 0)
-    {
-      cout << endl << "Fim de jogo!!!" << endl;
-      cout << "O garoto infelizmente perdeu todas suas vidas!!!" << endl;
-      printResultados();
-      deletandoLabirinto();
-      apagarArquivos();
+    AtualizarArqAux();
+    AtualizarArqVerificador();
+    if (getVidas() == 0) {
+      cout << endl << "Game over!!!" << endl;
+      cout << "O garoto perdeu todas as suas vidas..." << endl;
+      Resultado();
+      DeletandoLab();
+      ApagarArq();
     }
-  }while(itensCaminho != this->itensPegos);
+  } while (itensCaminho != this->itensPegos);
 }
 
-void Labirinto::caminhandoLabirinto()
-{
+void Lab::CaminharNoLab() {
   int linha, coluna;
 
-  while(1)
-  {
-    if(getVidas() == 0)
-    {
+  while (1) {
+    if (getVidas() == 0) {
       return;
     }
-    linha = (rand()%3)-1;
-    coluna = (rand()%3)-1;
+    linha = (rand() % 3) - 1;
+    coluna = (rand() % 3) - 1;
 
-    if(this->linha+linha >= 0 && this->coluna+coluna >= 0 && this->linha+linha < tamLabirinto && this->coluna+coluna < tamLabirinto)
-    {
-      if(linha != 0 || coluna != 0)
-      {
-        verificarPasso(this->linha+linha, this->coluna+coluna);
+    if (this->linha + linha >= 0 && this->coluna + coluna >= 0 &&
+        this->linha + linha < tamLab && this->coluna + coluna < tamLab) {
+      if (linha != 0 || coluna != 0) {
+        VerificarPasso(this->linha + linha, this->coluna + coluna);
       }
-    }
-    else
-    {
+    } else {
       return;
     }
   }
 }
 
-bool Labirinto::verificarPasso(int newLinha, int newColuna)
-{
+bool Lab::VerificarPasso(int newLinha, int newColuna) {
   int aux;
-  
-  if(this->labirinto[newLinha][newColuna] != "#")
-  {
+
+  if (this->lab[newLinha][newColuna] != "#") {
     this->passos++;
     this->linha = newLinha;
     this->coluna = newColuna;
     this->verificador[this->linha][this->coluna] = 1;
-    if(this->labirinto[this->linha][this->coluna] == "*")
-    {
+    if (this->lab[this->linha][this->coluna] == "*") {
       this->vidas--;
       this->perigos++;
-    }
-    else
-    {
-      if(this->labirinto[this->linha][this->coluna] != "0")
-      {
+    } else {
+      if (this->lab[this->linha][this->coluna] != "0") {
         this->itensPegos++;
         this->sacola++;
-        verificandoSacola();
-        
-        istringstream(this->labirinto[this->linha][this->coluna]) >> aux;
+        VerificarSacola();
+
+        istringstream(this->lab[this->linha][this->coluna]) >> aux;
         aux--;
-        this->labirinto[this->linha][this->coluna] = to_string(aux);
+        this->lab[this->linha][this->coluna] = to_string(aux);
       }
     }
     return 1;
@@ -454,58 +385,46 @@ bool Labirinto::verificarPasso(int newLinha, int newColuna)
   return 0;
 }
 
-void Labirinto::verificandoSacola()
-{
-  if(getSacola() == 4)
-  {
-    if(getVidas() == 10)
-    {
+void Lab::VerificarSacola() {
+  if (getSacola() == 4) {
+    if (getVidas() == 10) {
       setSacola(0);
-    }
-    else
-    {
+    } else {
       setSacola(0);
       this->vidas++;
     }
   }
 }
 
-int Labirinto::verificarCasasInexploradas()
-{
+int Lab::VerificarCasa() {
   ifstream arqVerificador;
   int casasInexploradas = 0;
   bool aux;
-  
+
   arqVerificador.open("arquivoVerificador.txt");
-  if(!arqVerificador.is_open())
-  {
+  if (!arqVerificador.is_open()) {
     cout << "Erro na abertura do arquivo: arquivoVerificador.txt!!!" << endl;
-    deletandoLabirinto();
-    apagarArquivos();
+    DeletandoLab();
+    ApagarArq();
   }
 
-  for(int k = 0; k < this->numLabirinto; k++)
-  {
-    for(int i = 0; i < this->tamLabirinto; i++)
-    {
-      for(int j = 0; j < this->tamLabirinto; j++)
-      {
+  for (int k = 0; k < this->numLab; k++) {
+    for (int i = 0; i < this->tamLab; i++) {
+      for (int j = 0; j < this->tamLab; j++) {
         arqVerificador >> aux;
-        if(aux == 0)
-        {
+        if (aux == 0) {
           casasInexploradas++;
         }
       }
-    }  
+    }
   }
   arqVerificador.close();
   return casasInexploradas;
 }
 
-void Labirinto::printResultados()
-{
-  cout << endl << "Casas percorridas ao todo: " << getPassos() << endl;
-  cout << "Soma de itens coletados pelo caminho: " << getItensPegos() << endl;
-  cout << "Número de casas não exploradas no labirinto: " << verificarCasasInexploradas() << endl;
-  cout << "Perigos enfrentados durante o caminho: " << getPerigos() << endl;
+void Lab::Resultado() {
+  cout << endl << "Posicoes percorridas: " << getPassos() << endl;
+  cout << "Total de itens obtidos: " << getItensPegos() << endl;
+  cout << "Posicoes nao exploradas: " << VerificarCasa() << endl;
+  cout << "Perigos confrontados: " << getPerigos() << endl;
 }
