@@ -48,6 +48,8 @@ Trabalho 2 de AEDS com implementação em C++ de "O Labirinto Recorrente".
  - Se o garoto andar em uma casa com (*), ele perderá uma vida;
  - Se o garoto andar pra fora do labirinto, ele será teleportado para o próximo labirinto, a não ser que ele esteja no último, no qual ele irá retornar para o labirinto inicial.
 
+<h2>Implementação </h2> 
+
 <h2>Arquivos </h2>
 
 * ``` main.cpp ```: Arquivo e função principal do sistema que recebe o arquivo Labirinto.hpp para execução do programa;
