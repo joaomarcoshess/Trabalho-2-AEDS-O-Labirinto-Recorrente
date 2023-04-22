@@ -82,9 +82,17 @@ Trabalho 2 de AEDS com implementação em C++ de "O Labirinto Recorrente".
 
 <h2>Exemplo de Resultado</h2>
 
+<p> Abaixo está um exemplo de labirinto para o garoto percorrer: </p>
+
 <p align="center">
   <img src="https://user-images.githubusercontent.com/75141271/233790448-883a3367-8167-4bd6-9db5-cc84bec94fbf.jpg">
 <p align="center"><b>Figura 1 - Labirinto Utilizado</b></p>
+
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/75141271/233790448-883a3367-8167-4bd6-9db5-cc84bec94fbf.jpg">
+<p align="center"><b>Figura 1 - Labirinto Utilizado</b></p>
+
 
 <h2>Compilação e Execução do Programa</h2>
 
