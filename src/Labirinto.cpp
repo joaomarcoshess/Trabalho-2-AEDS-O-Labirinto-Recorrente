@@ -358,13 +358,13 @@ void Lab::CaminharNoLab() {
   }
 }
 
-bool Lab::VerificarPasso(int newLinha, int newColuna) {
+bool Lab::VerificarPasso(int auxLinha, int auxColuna) {
   int aux;
 
-  if (this->lab[newLinha][newColuna] != "#") {
+  if (this->lab[auxLinha][auxColuna] != "#") {
     this->passos++;
-    this->linha = newLinha;
-    this->coluna = newColuna;
+    this->linha = auxLinha;
+    this->coluna = auxColuna;
     this->verificador[this->linha][this->coluna] = 1;
     if (this->lab[this->linha][this->coluna] == "*") {
       this->vidas--;
