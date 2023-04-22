@@ -71,7 +71,12 @@ Trabalho 2 de AEDS com implementação em C++ de "O Labirinto Recorrente".
 * ``` void ApagarArq(); ```: Apaga todos os arquivos auxiliadores usados durante o programa;
 * ``` void AtualizarArqAux(); ```: Atualiza o primeiro arquivo auxiliar, no momento em que o garoto caminhar por todos os labirintos, no qual será limpado e atualizado toda vez que isso acontecer;
 * ``` void AtualizarSegundoArqAux(); ```: Atualiza o segundo arquivo auxiliar, no momento em que o garoto completar um labirinto, atualizando o determinado labirinto neste arquivo;
-* ``` void CriarArqVerificador(); ```:  
+* ``` void CriarArqVerificador(); ```: Cria o arquivo verificador, que verifica por onde o garoto vai andar. Este arquivo recebe o valor do tamanho das matrizes e o total de matrizes e, logo em seguida, insere o número 0 em todas as casas. Depois, cria o segundo arquivo, no qual o caminho percorrido pelo garoto será demarcado pelo número 1;
+* ``` void AtualizarArqVerificador ```: Atualiza o primeiro arquivo verificador sempre que o garoto caminhar por todos os labirintos, limpando-o e atualizando com os dados do segundo arquivo verificador;
+* ``` void AtualizarSegundoArqVerificador ```: Sempre que o garoto completar um labirinto, o arquivo será atualizado com a matriz que o garoto percorreu, com os valores de 0 e 1;
+* ``` bool VerificarPasso(int auxlinha, int auxcoluna) ```: Verifica o que foi encontrado no caminho seguinte;
+* ``` int VerificarCasa() ```: Verifica se uma determinada casa não foi percorrida. Caso isso seja verdadeiro, o caminho será demarcado por 0 na função "AtualizarSegundoArqAux";
+* ``` void Resultado() ```: Exibe a análise de percurso realizada pelo garoto.
 
 
 <h2>Compilação e Execução do Programa</h2>
