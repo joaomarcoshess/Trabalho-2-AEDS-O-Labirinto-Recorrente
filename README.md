@@ -50,7 +50,11 @@ Trabalho 2 de AEDS com implementação em C++ de "O Labirinto Recorrente".
 
 <h2>Implementação </h2> 
 
-
+<p> Certas implementações e estratégias de programação foram necessárias para a organização e otimização do programa, sejam eles:
+ 
+ * ``` Caminhar no Labirinto ```: Foram criados uma matriz com o mesmo tamanho do labirinto, um arquivo auxiliar que recebia todos os labirintos e um segundo arquivo auxiliar vazio. Logo em seguida, a matriz recebia o primeiro labirinto do arquivo auxiliar. Depois, quando o garoto se movimenta e completa o caminho do primeiro labirinto, o caminho é salvo e armazenado no segundo arquivo auxiliar, com o processo sendo repetido por todos os outros labirintos. Por fim, após todos os labirintos percorridos, os arquivos eram limpados e atualizados até que o garoto perca ou ganhe o jogo;
+ 
+ 
 
 <h2>Arquivos </h2>
 
