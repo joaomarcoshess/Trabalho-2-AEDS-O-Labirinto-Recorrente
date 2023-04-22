@@ -16,9 +16,9 @@ Trabalho 2 de AEDS com implementação em C++ de "O Labirinto Recorrente".
 
 <h2>Introdução </h2>
 
-<p> Por muitos anos, foram criados jogos, principalmente 2d, no qual a sua movimentação se baseava em oito direções: Acima, abaixo, direita, esquerda e todas as diagonais. Atualmente, ---. Dito isso, o Labirinto Recorrente utiliza de matrizes NxN formada por variados caminhos que podem aumentar sua vida, diminuir sua vida, acrescentar sua quantidade de itens ou bloquear o seu caminho. </p>
+<p> Por muitos anos, foram criados jogos, principalmente 2d, no qual a sua movimentação se baseava em oito direções: Acima, abaixo, direita, esquerda e todas as diagonais. Atualmente, muitos jogos ainda tendem a seguir essa ideia, mas no geral a movimentação de um personagem tende a ser para todos os ângulos, ou seja, 360°. Dito isso, o Labirinto Recorrente utiliza de matrizes NxN formada por variados caminhos que podem aumentar sua vida, diminuir sua vida, acrescentar sua quantidade de itens ou bloquear o seu caminho. </p>
 
-<p> O programa consiste na utilização de K matrizes quadradas de tamanho [N/N], a fim de determinar o caminho com os maiores valores numéricos próximos de determinada posição. </p>
+<p> O programa consiste na utilização de K matrizes quadradas de tamanho [N/N], a fim de determinar o caminho com os maiores valores numéricos próximos de determinada posição. Quem irá enfrentar esses desafios será um garoto, que deve tentar vencer o Labirinto passando por todos os obstáculos que encontrar pelo caminho e pegar itens para ajudar em sua aventura.</p>
 
 <h2>Objetivo </h2>
 
