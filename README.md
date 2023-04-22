@@ -22,9 +22,11 @@ Trabalho 2 de AEDS com implementação em C++ de "O Labirinto Recorrente".
 
 <h2>Objetivo </h2>
 
-<p> Para vencer o Labirinto Recorrente, é necessário percorrer todas as posições dos labirintos que não sejam as de perigo e as paredes, podendo ser quaisquer uma das 8 posições ao redor do garoto, a partir de um sorteio realizado pelo sistema para determinar qual posição será utilizada pelo mesmo. O programa fará uma leitura do arquivo input.data, onde estão armazenadas as matrizes, e o usuário poderá determinar um ponto inicial, que não seja uma parede, para iniciar o programa.</p>
+<p> Para vencer o Labirinto Recorrente, é necessário percorrer todas as posições dos labirintos que não sejam as de perigo e as paredes, podendo ser quaisquer uma das 8 posições ao redor do garoto, a partir de um sorteio realizado pelo sistema para determinar qual posição será utilizada pelo mesmo. Além disso, quando ele chegar no labirinto final, ele será retornado para o labirinto inicial. Sua única forma de ganhar o jogo será chegar no labirinto final sem estar com nenhum item na sua sacola. O programa fará uma leitura do arquivo input.data, onde estão armazenadas as matrizes, e o usuário poderá determinar um ponto inicial, que não seja uma parede, para iniciar o programa.</p>
 
 <p> O sistema é formado por casas que possuem número de itens gerados aleatoriamente, que aumentam a vida do garoto, paredes que bloqueiam o caminho do menino , perigos, que diminui a vida do garoto e portais, que teleportam o menino para o labirinto inicial. Estes são representados por número, pelo símbolo #, pelo símbolo * e pela letra X, respectivamente.</p>
+
+<h2>Regras e Movimentação </h2>
 
 ``` Regras: ```
 
@@ -39,9 +41,28 @@ Trabalho 2 de AEDS com implementação em C++ de "O Labirinto Recorrente".
  - O garoto só perde o jogo se perder todas as suas vidas;
  - Se o usuário inserir uma posição que esteja cercado de paredes ou se o usuário passar o portal e cair na mesma situação, o sistema retornará que foi impossível de passar pelo labirinto.
 
+``` Movimentação: ```
+
+ - Se o garoto andar em uma casa com número, ele receberá um item na sacola, com o máximo de 4 itens;
+ - Se o garoto andar em uma casa com (#), ele será bloqueado de passar e o sistema sorteará outro caminho;
+ - Se o garoto andar em uma casa com (*), ele perderá uma vida;
+ - Se o garoto andar pra fora do labirinto, ele será teleportado para o próximo labirinto, a não ser que ele esteja no último, no qual ele irá retornar para o labirinto inicial.
+
 <h2>Funções </h2>
 
 * ``` void Welcome(); ```: Exibe a mensagem de entrada do programa; 
+* ``` void CriandoLab(); ```: Cria tanto o labirinto quanto o arquivo que irá mostrar o caminho feito pelo garoto;
+* ``` void DeletandoLab(); ```: Deleta tanto o labirinto quanto o arquivo que mostra o caminho feito pelo garoto;
+* ``` void ObterPosInicial(); ```: Obtém a posição inicial inserida pelo usuário;
+* ``` void ObterPosAleatoria(); ```: Sorteia uma posição aleatória quando o garoto passar por um portal;
+* ``` void VerificarParede(int linha, int coluna); ```: Verifica se o garoto não está cercado por 8 paredes ao seu redor;
+* ``` void CarminharNoLab();```: Sorteia o caminho no qual o garoto irá percorrer;
+* ``` void VerificarSacola(); ```: Verifica quantos itens na sacola o garoto possui;
+* ``` void CriarArqAux(); ```: Cria dois arquivos que auxiliam o programa, um para salvar os labirintos e o outro para salvar os labirintos com o caminho feito pelo garoto;
+* ``` void ApagarArq(); ```: Apaga todos os arquivos auxiliadores usados durante o programa;
+* ``` void AtualizarArqAux(); ```: Atualiza o primeiro arquivo auxiliar, no momento em que o garoto caminhar por todos os labirintos, no qual será limpado e atualizado toda vez que isso acontecer;
+* ``` void AtualizarSegundoArqAux(); ```: Atualiza o segundo arquivo auxiliar, no momento em que o garoto completar um labirinto, atualizando o determinado labirinto neste arquivo;
+* ``` void CriarArqVerificador(); ```:  
 
 
 <h2>Compilação e Execução do Programa</h2>
