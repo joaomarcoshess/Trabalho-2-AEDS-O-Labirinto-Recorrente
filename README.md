@@ -28,9 +28,16 @@ Trabalho 2 de AEDS com implementação em C++ de "O Labirinto Recorrente".
 
 ``` Regras: ```
 
-# O garoto inicia o jogo com 10 vidas, não podendo aumentar caso encontre itens.
-#
-
+ - O garoto inicia o jogo com 10 vidas, não podendo aumentar caso encontre itens;
+ - O garoto só ganhará mais vidas se estiver com 4 itens na sacola, a não ser que ele já esteja com 10 vidas;
+ - A única forma de pegar itens é ir à uma posição que contenha uma quantidade de itens diferente de 0, não podendo pegar mais do que 1 item;
+ - O garoto sempre se movimentará de forma aleatória;
+ - Se a posição não tiver um item, nada irá acontecer;
+ - Os labirintos estão cercados de portais em volta deles mesmo, então caso o garoto ultrapasse os limites das matrizes, o mesmo será levado para o próximo labirinto, a não ser que aquele seja o último labirinto;
+ - Caso o labirinto em que o garoto se situa seja o último, o garoto irá voltar para o labirinto inicial;
+ - O garoto só vence o jogo se chegar do primeiro labirinto ao último labirinto sem pegar um item;
+ - O garoto só perde o jogo se perder todas as suas vidas;
+ - Se o usuário inserir uma posição que esteja cercado de paredes ou se o usuário passar o portal e cair na mesma situação, o sistema retornará que foi impossível de passar pelo labirinto.
 
 <h2>Funções </h2>
 
