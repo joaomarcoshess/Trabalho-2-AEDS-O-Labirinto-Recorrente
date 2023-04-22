@@ -14,7 +14,7 @@ int main()
   l.CriandoLab();
   l.PegarValoresLab();
   l.DeletandoLab();
-  cout << endl << "Vitória!!!" << endl;
+  cout << endl << "Parabéns!! O garoto conseguiu ganhar o jogo :D" << endl;
   l.Resultado();
   
   remove("arquivoAuxiliar.txt");
