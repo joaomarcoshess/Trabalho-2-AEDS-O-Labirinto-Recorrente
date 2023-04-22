@@ -24,7 +24,13 @@ Trabalho 2 de AEDS com implementação em C++ de "O Labirinto Recorrente".
 
 <p> Para vencer o Labirinto Recorrente, é necessário percorrer todas as posições dos labirintos que não sejam as de perigo e as paredes, podendo ser quaisquer uma das 8 posições ao redor do garoto, a partir de um sorteio realizado pelo sistema para determinar qual posição será utilizada pelo mesmo. O programa fará uma leitura do arquivo input.data, onde estão armazenadas as matrizes, e o usuário poderá determinar um ponto inicial, que não seja uma parede, para iniciar o programa.</p>
 
-<p> O sistema é formado por casas que possuem número de itens gerados aleatoriamente, que aumentam a vida do garoto, paredes que bloqueiam o caminho do menino e perigos, que diminui a vida do garoto. Estes são representados por número, pelo símbolo # e pelo símbolo *, respectivamente.</p>
+<p> O sistema é formado por casas que possuem número de itens gerados aleatoriamente, que aumentam a vida do garoto, paredes que bloqueiam o caminho do menino , perigos, que diminui a vida do garoto e portais, que teleportam o menino para o labirinto inicial. Estes são representados por número, pelo símbolo #, pelo símbolo * e pela letra X, respectivamente.</p>
+
+``` Regras: ```
+
+# O garoto inicia o jogo com 10 vidas, não podendo aumentar caso encontre itens.
+#
+
 
 <h2>Funções </h2>
 
