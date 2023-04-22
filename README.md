@@ -80,6 +80,11 @@ Trabalho 2 de AEDS com implementação em C++ de "O Labirinto Recorrente".
 * ``` int VerificarCasa() ```: Verifica se uma determinada casa não foi percorrida. Caso isso seja verdadeiro, o caminho será demarcado por 0 na função "AtualizarSegundoArqAux";
 * ``` void Resultado() ```: Exibe a análise de percurso realizada pelo garoto.
 
+<h2>Exemplo de Resultado</h2>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/75141271/233790448-883a3367-8167-4bd6-9db5-cc84bec94fbf.jpg">
+<p align="center"><b>Figura 1 - Labirinto Utilizado</b></p>
 
 <h2>Compilação e Execução do Programa</h2>
 
