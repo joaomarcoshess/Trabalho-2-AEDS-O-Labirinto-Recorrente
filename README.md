@@ -50,6 +50,8 @@ Trabalho 2 de AEDS com implementação em C++ de "O Labirinto Recorrente".
 
 <h2>Implementação </h2> 
 
+
+
 <h2>Arquivos </h2>
 
 * ``` main.cpp ```: Arquivo e função principal do sistema que recebe o arquivo Labirinto.hpp para execução do programa;
@@ -83,26 +85,26 @@ Trabalho 2 de AEDS com implementação em C++ de "O Labirinto Recorrente".
 <h2>Exemplo de Resultado</h2>
 
 <p> Abaixo está um exemplo de labirinto para o garoto percorrer: </p>
-
+<br>
 <p align="center">
   <img src="https://user-images.githubusercontent.com/75141271/233790448-883a3367-8167-4bd6-9db5-cc84bec94fbf.jpg">
 <p align="center"><b>Figura 1 - Labirinto Utilizado</b></p>
-
+<br>
 <p> O usuário deve inserir uma linha e uma coluna para iniciar o percurso no labirinto. </p>
-
+<br>
 <p align="center">
   <img src="https://user-images.githubusercontent.com/75141271/233791190-566f0a54-6207-4a8c-b539-444dae55666d.jpg">
-<p align="center"><b>Figura 2 - Resultado do jogo=</b></p>
-
+<p align="center"><b>Figura 2 - Resultado do jogo</b></p>
+<br>
 <p> O garoto no exemplo acima conseguiu ganhar o jogo pois percorreu todo o labirinto sem pegar itens. O resultado mostra as posições percorridas, a quantidade de itens coletados, as posições não exploradas e os perigos confrontados.</p>
-
+<br>
 <h2>Compilação e Execução do Programa</h2>
 
 <p>Através do makefile, é posição utilizar comandos que realizam o processo de compilação e execução do programa. A seguir, temos alguns comandos que podem ser utilizados:</p><br>
 
-<li><b>``` make ```</b>: Realiza a compilação do código por meio do gcc, no qual o resultado vai para a pasta build.</li><br>
-<li><b>``` make run ```</b>: Executa o programa armazenado na pasta build após este ser compilado.</li><br>
-<li><b>``` make clean ```</b>: Exclui a última compilação feita anteriormente na pasta build.</li><br><br>
+* ``` make ```: Realiza a compilação do código por meio do gcc, no qual o resultado vai para a pasta build.</li><br>
+* ``` make run ```: Executa o programa armazenado na pasta build após este ser compilado.</li><br>
+* ``` make clean ```: Exclui a última compilação feita anteriormente na pasta build.</li><br><br>
 
 <p>Também é possível executar o programa através do site de hospedagem de código, Replit, onde foi realizado a programação do código do "O Labirinto Recorrente": <link>https://replit.com/@Joao-MarcosMa57/Trabalho-2-AEDS</link></p>
 
