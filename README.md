@@ -56,6 +56,7 @@ Trabalho 2 de AEDS com implementação em C++ de "O Labirinto Recorrente".
  * ``` Posição Inicial ```: A posição inicial ignora os efeitos causados pela posição com item e/ou posição de perigo, a não ser que seja uma posição com parede. Neste caso, o usuário deve informar outra posição;
  * ``` Caminho Aleatório ```: Foram criadas duas variáveis que recebiam um valor aleatório de 1 ou -1, no qual 1 representa a linha e -1 representa a coluna. Logo em seguida, as duas se somavam contendo um valor gerado que determina para qual direção o garoto deverá seguir;
  * ``` Casas Inexploradas ```: Para obter o valor das casas inexploradas, foram necessários a utilização de dois arquivos auxiliares que são constituidos por matrizes contendo os valores 0 e 1, no qual 0 representa uma casa inexplorada e 1 representa uma casa explorada;
+ * ``` Caminho percorrido ```: Foram utilizados dois arquivos verificadores que auxiliam os arquivos auxiliares e puxam o resultados destes para eles, e no final do programa levam o caminho percorrido para o ArquivoVerificador.txt;
  * ``` Resultados ```: Para os valores do resto dos resultados, foram utilizadas variáveis estáticas que eram incrementadas assim que determinada ação ocorrece, como a coleta de itens ou casas percorridas.
  
 
@@ -119,8 +120,11 @@ Trabalho 2 de AEDS com implementação em C++ de "O Labirinto Recorrente".
 
 <h2>Conclusão</h2>
 
+<p>O programa em questão não teve uma dificuldade elevada para ser programado, porém a quantidade de detalhes que devem ser levados em consideração faz com que o programa exija bastante tempo de dedicação, o que o torna um jogo trabalhoso de ser feito.  </p>
+
 <p>Não é possível calcular o custo computacional de um programa com caminhos randômicos, pois existem inúmeras possibilidades de opções para serem analisadas. No entanto, é possível pegar um caso específico, ou melhor, um caso especial para ser explorado, que é o caso do programa percorrer todas as colunas de uma determinada linha e logo em seguida passar para a próxima. Caso isso aconteça, o custo computacional será n*M. </p>
 
+<p>Por fim, a maneira como o programa foi desenvolvido mostrou-se uma ótimo jeito para implementar o código, pois apesar da quantidade de funções e arquivos necessários para a sua execução, este foi feito de maneira organizada e otimizada para o uso e, além disso, possui pequena ou nenhuma chance de se estourar as matrizes, pois não é necessário criar uma matriz tridimensional para salvar os labirintos </p>
 
 <h2>Contato</h2>
 
