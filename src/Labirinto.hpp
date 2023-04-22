@@ -50,7 +50,7 @@ class Lab
     void PegarValoresLab();
     void CaminharNoLab();
     void VerificarSacola();
-    bool VerificarPasso(int newLinha, int newColuna);
+    bool VerificarPasso(int auxLinha, int auxColuna);
     int VerificarCasa();
     void Resultado();
 };
