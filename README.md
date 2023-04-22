@@ -91,7 +91,7 @@ Trabalho 2 de AEDS com implementação em C++ de "O Labirinto Recorrente".
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/75141271/233791190-566f0a54-6207-4a8c-b539-444dae55666d.jpg">
-<p align="center"><b>Figura 1 - Labirinto Utilizado</b></p>
+<p align="center"><b>Figura 2 - Resultado do jogo=</b></p>
 
 
 <h2>Compilação e Execução do Programa</h2>
