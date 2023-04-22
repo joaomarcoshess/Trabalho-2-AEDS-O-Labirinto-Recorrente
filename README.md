@@ -48,6 +48,15 @@ Trabalho 2 de AEDS com implementação em C++ de "O Labirinto Recorrente".
  - Se o garoto andar em uma casa com (*), ele perderá uma vida;
  - Se o garoto andar pra fora do labirinto, ele será teleportado para o próximo labirinto, a não ser que ele esteja no último, no qual ele irá retornar para o labirinto inicial.
 
+<h2>Arquivos </h2>
+
+* ``` main.cpp ```: Arquivo e função principal do sistema que recebe o arquivo Labirinto.hpp para execução do programa;
+* ``` Labirinto.hpp ```: Arquivo que cria as funções utilizadas;
+* ``` Labirinto.cpp ```: Arquivo que implementa as funções criadas no Labirinto.hpp;
+* ``` input.data ```: Contém os labirintos utilizados no programa;
+* ``` ArquivoVerificador.txt ```: Arquivo que demonstra o caminho realizado pelo garoto;
+* ``` Makefile ```: Automatiza os processos de compilação do sistema.
+
 <h2>Funções </h2>
 
 * ``` void Welcome(); ```: Exibe a mensagem de entrada do programa; 
@@ -69,9 +78,9 @@ Trabalho 2 de AEDS com implementação em C++ de "O Labirinto Recorrente".
 
 <p>Através do makefile, é posição utilizar comandos que realizam o processo de compilação e execução do programa. A seguir, temos alguns comandos que podem ser utilizados:</p><br>
 
-<li><b>make</b>: Realiza a compilação do código por meio do gcc, no qual o resultado vai para a pasta build.</li><br>
-<li><b>make run</b>: Executa o programa armazenado na pasta build após este ser compilado.</li><br>
-<li><b>make clean</b>: Exclui a última compilação feita anteriormente na pasta build.</li><br><br>
+<li><b>``` make ```</b>: Realiza a compilação do código por meio do gcc, no qual o resultado vai para a pasta build.</li><br>
+<li><b>``` make run ```</b>: Executa o programa armazenado na pasta build após este ser compilado.</li><br>
+<li><b>``` make clean ```</b>: Exclui a última compilação feita anteriormente na pasta build.</li><br><br>
 
 <p>Também é possível executar o programa através do site de hospedagem de código, Replit, onde foi realizado a programação do código do "O Labirinto Recorrente": <link>https://replit.com/@Joao-MarcosMa57/Trabalho-2-AEDS</link></p>
 
