@@ -53,7 +53,10 @@ Trabalho 2 de AEDS com implementação em C++ de "O Labirinto Recorrente".
 <p> Certas implementações e estratégias de programação foram necessárias para a organização e otimização do programa, sejam eles:
  
  * ``` Caminhar no Labirinto ```: Foram criados uma matriz com o mesmo tamanho do labirinto, um arquivo auxiliar que recebia todos os labirintos e um segundo arquivo auxiliar vazio. Logo em seguida, a matriz recebia o primeiro labirinto do arquivo auxiliar. Depois, quando o garoto se movimenta e completa o caminho do primeiro labirinto, o caminho é salvo e armazenado no segundo arquivo auxiliar, com o processo sendo repetido por todos os outros labirintos. Por fim, após todos os labirintos percorridos, os arquivos eram limpados e atualizados até que o garoto perca ou ganhe o jogo;
- 
+ * ``` Posição Inicial ```: A posição inicial ignora os efeitos causados pela posição com item e/ou posição de perigo, a não ser que seja uma posição com parede. Neste caso, o usuário deve informar outra posição;
+ * ``` Caminho Aleatório ```: Foram criadas duas variáveis que recebiam um valor aleatório de 1 ou -1, no qual 1 representa a linha e -1 representa a coluna. Logo em seguida, as duas se somavam contendo um valor gerado que determina para qual direção o garoto deverá seguir;
+ * ``` Casas Inexploradas ```: Para obter o valor das casas inexploradas, foram necessários a utilização de dois arquivos auxiliares que são constituidos por matrizes contendo os valores 0 e 1, no qual 0 representa uma casa inexplorada e 1 representa uma casa explorada;
+ * ``` Resultados ```: Para os valores do resto dos resultados, foram utilizadas variáveis estáticas que eram incrementadas assim que determinada ação ocorrece, como a coleta de itens ou casas percorridas.
  
 
 <h2>Arquivos </h2>
